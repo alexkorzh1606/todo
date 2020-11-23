@@ -1,8 +1,11 @@
+
+let date = new Date();
 export default class Todo{
     priority: number;
     text: string;
-    dt:number;
+    dt: string;
     dl: string;
+    id: number;
 
     /*
         priority - важность дела
@@ -13,7 +16,7 @@ export default class Todo{
     constructor(priority:number, text:string, dl:string) {
         this.priority = priority;
         this.text = text;
-        this.dt = Date.now();
+        this.dt = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
         this.dl = dl;
     }
 }
